@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>apple.com</title>
+  </head>
+  <body>
+    <form action="http://localhost:2026/add-product" method="POST">
+      <label for="product_name">product_name:</label>
+      <input type="text" id="product_name" name="product_name" required /><br />
+
+      <!--  product_url Field -->
+      <label for="product_url">product_url:</label>
+      <input type="url" id="product_url" name="product_url" required /><br />
+
+      <!--  Product_brief_description Field -->
+      <label for="Product_brief_description">Product_brief_description:</label>
+      <input
+        type="text"
+        id="Product_brief_description"
+        name="Product_brief_description"
+        required
+      />
+      <br />
+
+      <!--  Product_img Field -->
+      <label for="Product_img">Product_img:</label>
+      <input type="url" id="Product_img" name="Product_img" required /><br />
+      <br />
+      <!--  Product_img Field -->
+      <label for="Product_link">Product_link:</label>
+      <input type="url" id="Product_link" name="Product_link" required /><br />
+      <!--  Starting_price Field -->
+      <label for="Starting_price">Starting_price:</label>
+      <input
+        type="text"
+        id="Starting_price"
+        name="Starting_price"
+        required
+      /><br />
+      <!--  Price_range Field -->
+      <label for="Price_range">Price_range:</label>
+      <input type="text" id="Price_range" name="Price_range" required /><br />
+
+      <!--  Product_brief_description Field -->
+      <label for="Product_description">Product_description:</label>
+      <textarea
+        id="Product_description"
+        name="Product_description"
+        rows="5"
+        cols="50"
+        placeholder="Enter a detailed description here..."
+        required
+      ></textarea>
+
+      <!-- Submit Button -->
+      <br />
+      <button type="submit">Send Data</button>
+    </form>
+  </body>
+</html>
