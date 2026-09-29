@@ -1,0 +1,262 @@
+/* Modern Apple-style Footer Component Styling */
+
+.footer-wrapper {
+  background-color: #f5f5f7;
+  color: #6e6e73;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  padding-top: 10px;
+  letter-spacing: -0.01em;
+}
+
+.footer-wrapper a {
+  color: #424245;
+  text-decoration: none;
+  transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.footer-wrapper a:hover {
+  color: #1d1d1f;
+  text-decoration: underline;
+}
+
+/* Legal Notice / Upper Disclaimer Section */
+.upper-text-container {
+  border-bottom: 1px solid #d2d2d7;
+  padding: 16px 0 12px;
+  margin-bottom: 20px;
+  color: #86868b;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.upper-text-container p {
+  margin-bottom: 10px;
+}
+
+.upper-text-container p:last-child {
+  margin-bottom: 0;
+}
+
+.upper-text-container a {
+  color: #515154;
+  text-decoration: underline;
+}
+
+.upper-text-container a:hover {
+  color: #1d1d1f;
+}
+
+/* Footer Links Columns */
+.footer-links-wrapper {
+  margin-bottom: 10px;
+}
+
+.footer-column-section {
+  margin-bottom: 14px;
+}
+
+.footer-column-header {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 6px;
+}
+
+.footer-links-list li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-links-list a {
+  color: #424245;
+  font-size: 12px;
+}
+
+.footer-links-list a.accent-link {
+  color: #0066cc;
+}
+
+.footer-links-list a.accent-link:hover {
+  color: #004499;
+}
+
+/* Accordion icon for mobile screens */
+.accordion-icon {
+  display: none;
+  font-size: 14px;
+  font-weight: 300;
+  color: #86868b;
+  transition: transform 0.25s ease;
+}
+
+.accordion-icon.open {
+  transform: rotate(45deg);
+}
+
+/* My Apple Shopping Banner */
+.my-apple-wrapper {
+  border-bottom: 1px solid #d2d2d7;
+  padding: 16px 0;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #86868b;
+  line-height: 1.4;
+}
+
+.my-apple-wrapper a {
+  color: #0066cc;
+}
+
+.my-apple-wrapper a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom Legal & Copyright Bar */
+.copyright-wrapper {
+  padding: 18px 0 32px;
+  font-size: 11px;
+  color: #86868b;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+
+.copyright-text {
+  color: #86868b;
+  white-space: nowrap;
+}
+
+.footer-legal-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-legal-links ul li {
+  padding: 0 10px;
+  border-right: 1px solid #d2d2d7;
+  line-height: 1.2;
+}
+
+.footer-legal-links ul li:first-child {
+  padding-left: 0;
+}
+
+.footer-legal-links ul li:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.footer-legal-links ul li a {
+  color: #515154;
+}
+
+.footer-legal-links ul li a:hover {
+  color: #1d1d1f;
+}
+
+.footer-country {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  font-size: 11px;
+}
+
+.flag-wrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 6px;
+}
+
+.flag-wrapper img {
+  width: 16px;
+  height: auto;
+  border-radius: 1px;
+}
+
+.footer-country-name {
+  color: #515154;
+  font-weight: 400;
+}
+
+.footer-country:hover .footer-country-name {
+  color: #1d1d1f;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 767.98px) {
+  .footer-column-header {
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #d2d2d7;
+    margin-bottom: 0;
+  }
+
+  .accordion-icon {
+    display: inline-block;
+  }
+
+  .footer-links-list {
+    display: none;
+    padding: 10px 0 6px 12px;
+    border-bottom: 1px solid #e8e8ed;
+    margin-bottom: 0;
+  }
+
+  .footer-links-list.expanded {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  .copyright-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-legal-links ul {
+    margin-top: 4px;
+  }
+
+  .footer-legal-links ul li:first-child {
+    padding-left: 0;
+  }
+
+  .footer-country {
+    margin-left: 0;
+    margin-top: 6px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
