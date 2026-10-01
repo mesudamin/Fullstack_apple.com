@@ -5,6 +5,14 @@ let app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Enable CORS for frontend requests
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
 let connection;
 async function connections() {
   try {
@@ -109,6 +117,7 @@ app.get("/iphones", (req, res) => {
       res.end(stringIphones);
     } catch (error) {
       console.log("error on selecting  ", error);
+      res.status(500).json({ error: error.message });
     } finally {
       if (connection) {
         await connection.end();

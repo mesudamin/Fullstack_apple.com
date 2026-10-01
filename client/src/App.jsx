@@ -16,28 +16,28 @@ import { Route, Routes } from "react-router-dom"
 import SharedLayout from "./assets/components/SharedLayout.jsx"
 
 function App() {
-  
+
 
   return (
     <>
-   
-   <Routes>
-    <Route path="/" element={<SharedLayout/>}>
-    <Route path="/" element={  <Main/>} />
-    <Route path="Mac" element={ <Mac/>} />
-    <Route path="Iphone" element={    <Iphone/>} />
-    <Route path="Ipad" element={    <Ipad/>} />
-    <Route path="Watch" element={    <Watch/>} />
-    <Route path="Tv" element={    <Tv/>} />
-    <Route path="Music" element={    <Music/>} />
-    <Route path="Support" element={    <Support/>} />
-    <Route path="Search" element={    <Search/>} />
-    <Route path="Cart" element={    <Cart/>} />
-    <Route path="*" element={    <Four04/>} />
- {/* <Youtubeapi/> */}
-    </Route>
-   </Routes>
-    
+
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route path="/" element={<Main />} />
+          <Route path="Mac" element={<Youtubeapi />} />
+          <Route path="Iphone" element={<Iphone />} />
+          <Route path="Ipad" element={<Ipad />} />
+          <Route path="Watch" element={<Watch />} />
+          <Route path="Tv" element={<Tv />} />
+          <Route path="Music" element={<Music />} />
+          <Route path="Support" element={<Support />} />
+          <Route path="Search" element={<Search />} />
+          <Route path="Cart" element={<Cart />} />
+          <Route path="*" element={<Four04 />} />
+
+        </Route>
+      </Routes>
+
     </>
   )
 }
