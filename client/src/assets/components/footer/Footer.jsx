@@ -1,6 +1,16 @@
-import flag from "../../images/icons/16.png"
+import { useState } from "react";
+import flag from "../../images/icons/16.png";
 
 export default function Footer() {
+  const [expandedSections, setExpandedSections] = useState({});
+
+  const toggleSection = (sectionKey) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [sectionKey]: !prev[sectionKey],
+    }));
+  };
+
   return (
     <>
       	<footer className="footer-wrapper">
@@ -13,8 +23,8 @@ export default function Footer() {
 			</div>
 			<div className="footer-links-wrapper row"> 
 				<div className="links-wrapper-1 col-sm-12 col-md">
-					<h3>Shop and Learn</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("shop")} className={expandedSections["shop"] ? "expanded" : ""}>Shop and Learn</h3>
+					<ul className={expandedSections["shop"] ? "expanded" : ""}>
 						<li><a href="#">Mac</a></li>
 						<li><a href="#">iPad</a></li>
 						<li><a href="#">iPhone</a></li>
@@ -29,8 +39,8 @@ export default function Footer() {
 					</ul>
 				</div> 
 				<div className="links-wrapper-2 col-sm-12 col-md">
-					<h3>Services</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("services")} className={expandedSections["services"] ? "expanded" : ""}>Services</h3>
+					<ul className={expandedSections["services"] ? "expanded" : ""}>
 						<li><a href="#">Apple Music</a></li>
 						<li><a href="#">Apple News+</a></li>
 						<li><a href="#">Apple TV+</a></li>
@@ -38,16 +48,16 @@ export default function Footer() {
 						<li><a href="#">Apple Card</a></li>
 						<li><a href="#">iCloud</a></li>
 					</ul>
-					<h3>Account</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("account")} className={expandedSections["account"] ? "expanded" : ""}>Account</h3>
+					<ul className={expandedSections["account"] ? "expanded" : ""}>
 						<li><a href="#">Manage Your Apple ID</a></li>
 						<li><a href="#">Apple Store Account</a></li>
 						<li><a href="#">iCloud.com</a></li>
 					</ul>					
 				</div> 
 				<div className="links-wrapper-3 col-sm-12 col-md">
-					<h3>Apple Store</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("store")} className={expandedSections["store"] ? "expanded" : ""}>Apple Store</h3>
+					<ul className={expandedSections["store"] ? "expanded" : ""}>
 						<li><a href="#">Find a Store</a></li>
 						<li><a href="#">Genius Bar</a></li>
 						<li><a href="#">Today at Apple</a></li>
@@ -62,31 +72,31 @@ export default function Footer() {
 					</ul>
 				</div>  
 				<div className="links-wrapper-4 col-sm-12 col-md">
-					<h3>For Business</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("business")} className={expandedSections["business"] ? "expanded" : ""}>For Business</h3>
+					<ul className={expandedSections["business"] ? "expanded" : ""}>
 						<li><a href="#">Apple and Business</a></li>
 						<li><a href="#">Shop for Business</a></li>
 					</ul>		
-					<h3>For Education</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("education")} className={expandedSections["education"] ? "expanded" : ""}>For Education</h3>
+					<ul className={expandedSections["education"] ? "expanded" : ""}>
 						<li><a href="#">Apple and Education</a></li>
 						<li><a href="#">Shop for College</a></li>
 					</ul>
-					<h3>For Healthcare</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("healthcare")} className={expandedSections["healthcare"] ? "expanded" : ""}>For Healthcare</h3>
+					<ul className={expandedSections["healthcare"] ? "expanded" : ""}>
 						<li><a href="#">Manage Your Apple ID</a></li>
 						<li><a href="#">Apple Store Account</a></li>
 						<li><a href="#">iCloud.com</a></li>
 					</ul>	
-					<h3>For Government</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("government")} className={expandedSections["government"] ? "expanded" : ""}>For Government</h3>
+					<ul className={expandedSections["government"] ? "expanded" : ""}>
 						<li><a href="#">Apple and Education</a></li>
 						<li><a href="#">Shop for College</a></li>
 					</ul>
 				</div> 
 				<div className="links-wrapper-5 col-sm-12 col-md">
-					<h3>Apple Values</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("values")} className={expandedSections["values"] ? "expanded" : ""}>Apple Values</h3>
+					<ul className={expandedSections["values"] ? "expanded" : ""}>
 						<li><a href="#">Find a Store</a></li>
 						<li><a href="#">Genius Bar</a></li>
 						<li><a href="#">Today at Apple</a></li>
@@ -94,8 +104,8 @@ export default function Footer() {
 						<li><a href="#">Field Trip</a></li>
 						<li><a href="#">Apple Store App</a></li>
 					</ul>
-					<h3>About Apple</h3>
-					<ul>
+					<h3 onClick={() => toggleSection("about")} className={expandedSections["about"] ? "expanded" : ""}>About Apple</h3>
+					<ul className={expandedSections["about"] ? "expanded" : ""}>
 						<li><a href="#">Find a Store</a></li>
 						<li><a href="#">Genius Bar</a></li>
 						<li><a href="#">Today at Apple</a></li>

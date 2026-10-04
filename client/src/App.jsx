@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route path="/" element={<Main />} />
-          <Route path="Mac" element={<Youtubeapi />} />
+          <Route path="Mac" element={<Mac />} />
           <Route path="Iphone" element={<Iphone />} />
           <Route path="Ipad" element={<Ipad />} />
           <Route path="Watch" element={<Watch />} />

@@ -119,10 +119,10 @@ app.get("/iphones", (req, res) => {
       console.log("error on selecting  ", error);
       res.status(500).json({ error: error.message });
     } finally {
-      if (connection) {
-        await connection.end();
-        console.log("Connection closed cleanly.");
-      }
+      // if (connection) {
+      //   await connection.end();
+      //   console.log("Connection closed cleanly.");
+      // }
     }
   }
   selectAll();
@@ -175,10 +175,10 @@ app.post("/add-product", (req, res) => {
     } catch (error) {
       console.log("error on inserting ", error);
     } finally {
-      if (connection) {
-        await connection.end();
-        console.log("Connection closed cleanly.");
-      }
+      // if (connection) {
+      //   await connection.end();
+      //   console.log("Connection closed cleanly.");
+      // }
     }
   }
   inserting();

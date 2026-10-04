@@ -1,0 +1,30 @@
+{
+  "products": [
+    {
+      "Product_id": 1,
+      "product_url": "https://www.apple.com/iphone-18-pro/",
+      "product_name": "iPhone 18 Pro",
+      "Description_id": 2,
+      "Product_brief_description": "Pro further.",
+      "Product_description": "The longest battery life in an iPhone. Up to 45 hours video playback on iPhone 18 Pro Max.",
+      "Product_img": "https://www.apple.com/v/iphone-18-pro/c/images/overview/contrast/iphone_18_pro_alt__gcw09g1aoqie_large.jpg",
+      "Product_link": "https://www.apple.com/iphone-18-pro/",
+      "Price_id": 2,
+      "Starting_price": "From $1199 or $49.95/mo. for 24 mo.",
+      "Price_range": "From $1199 or $49.95/mo. for 24 mo.*"
+    },
+    {
+      "Product_id": 2,
+      "product_url": "https://www.apple.com/in/iphone-se/",
+      "product_name": "iPhone SE",
+      "Description_id": 1,
+      "Product_brief_description": "Pro cameras. Pro display. Pro performance.",
+      "Product_description": "A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life. And a mind-blowing chip that doubles down on machine learning and pushes the boundaries of what a smartphone can do. Welcome to the first iPhone powerful enough to be called Pro.",
+      "Product_img": "https://d3v4ckszie160z.cloudfront.net/assets/documents/fullstack-web-application-development/class-contents/imageone-content-1764069182371.jpeg",
+      "Product_link": "https://support.apple.com/en-in/111879",
+      "Price_id": 1,
+      "Starting_price": "$399",
+      "Price_range": "From $9.54/mo. or $229 with trade-in."
+    }
+  ]
+}
