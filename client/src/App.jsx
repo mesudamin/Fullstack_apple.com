@@ -1,7 +1,4 @@
-import Header from "./assets/components/HEADER/Header"
-import Footer from "./assets/components/Footer/Footer"
 import Main from "./assets/components/Main/Main.jsx"
-import Youtubeapi from "./assets/components/Youtubeapi/Youtubeapi.jsx"
 import Mac from "./assets/components/Mac/Mac.jsx"
 import Iphone from "./assets/components/Iphone/Iphone.jsx"
 import Ipad from "./assets/components/Ipad/Ipad.jsx"
